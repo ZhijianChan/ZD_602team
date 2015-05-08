@@ -474,8 +474,8 @@ public class EditContact extends Activity implements OnClickListener {
 		  
 	    if (mState == STATE_SCAN_RES && "".equals(targetId) == false) {
 	    
-		  new AlertDialog.Builder(this).setTitle("Notice").setMessage("�Ƿ��͸�����Ϣ���Է�")
-		      .setNegativeButton("ȡ��", new DialogInterface.OnClickListener() {
+		  new AlertDialog.Builder(this).setTitle("Notice").setMessage("是否发送个人信息给对方")
+		      .setNegativeButton("取消", new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					EditContact.this.finish();
@@ -638,7 +638,10 @@ public class EditContact extends Activity implements OnClickListener {
 				
 				if (i != res.size() - 1) t += ", ";
 			}
-			but_edit_tag.setText(t);
+			if ("".equals(t))
+				but_edit_tag.setText(R.string.edit_tag);
+			else
+				but_edit_tag.setText(t);
 		}
 	}
 

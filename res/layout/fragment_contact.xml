@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/contact_tot_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF" >
+
+        <TextView
+            android:id="@+id/mtext_tot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textColor="#909090"
+            android:textSize="8pt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contact_list_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/contact_tot_rl" >
+
+        <ListView
+            android:id="@+id/contact_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/section_toast_layout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/toasttext_shape"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/section_toast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#408080"
+                android:textSize="30sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/alphabet_button"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/alphabet_white" />
+
+</RelativeLayout>

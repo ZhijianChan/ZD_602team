@@ -1,0 +1,229 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.contact.EditContact" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp" >
+
+        <ProgressBar
+            android:id="@+id/edit_progress_bar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/edit_name_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_progress_bar" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/name"
+                android:textColor="#408080"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/name"
+                android:layout_toRightOf="@+id/name"
+                android:hint="@string/hint_name"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="8pt" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_remark_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_name_rl"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/remark"
+                android:textColor="#408080"
+                android:textSize="8pt" />
+
+            <EditText
+                android:id="@+id/edit_remark"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/remark"
+                android:layout_toRightOf="@+id/remark"
+                android:hint="@string/hint_remark"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="8pt" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_tag_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_remark_rl"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/label_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/tag"
+                android:textColor="#408080"
+                android:textSize="8pt" />
+
+            <Button
+                android:id="@+id/edit_but_tag"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/label_tag"
+                android:layout_toRightOf="@+id/label_tag"
+                android:gravity="center"
+                android:text="@string/edit_tag"
+                android:textColor="#555"
+                android:textSize="6pt" >
+            </Button>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_tel_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_tag_rl"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/label_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/tel"
+                android:textColor="#408080"
+                android:textSize="8pt" />
+
+            <TableLayout
+                android:id="@+id/edit_table_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/label_tel"
+                android:layout_toRightOf="@+id/label_tel"
+                android:stretchColumns="0" >
+            </TableLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/add_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignRight="@+id/edit_tel_rl"
+            android:layout_below="@+id/edit_tel_rl"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="#408080"
+            android:textSize="6pt" />
+
+        <RelativeLayout
+            android:id="@+id/edit_addr_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_tel"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/label_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/addr"
+                android:textColor="#408080"
+                android:textSize="8pt" />
+
+            <TableLayout
+                android:id="@+id/edit_table_addr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/label_addr"
+                android:layout_toRightOf="@+id/label_addr"
+                android:stretchColumns="0" >
+            </TableLayout>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/add_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignRight="@+id/edit_addr_rl"
+            android:layout_below="@+id/edit_addr_rl"
+            android:layout_marginTop="-10dp"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="#408080"
+            android:textSize="6pt" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/delete"
+            android:layout_below="@+id/add_addr"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/delete"
+            android:background="@drawable/but_confirm_shape"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/confirm"
+            android:textColor="#488"
+            android:textSize="8pt" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/add_addr"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/but_delete_shape"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="@string/delete"
+            android:textColor="#fff"
+            android:textSize="8pt" />
+    </RelativeLayout>
+
+</ScrollView>

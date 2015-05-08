@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.contact.MainActivity" >
+
+    <item
+        android:id="@+id/main_search_option"
+        android:showAsAction="never"
+        android:title="@string/search"/>
+    <item
+        android:id="@+id/main_insert_option"
+        android:showAsAction="never"
+        android:title="@string/add"/>
+    <item
+        android:id="@+id/main_scan_option"
+        android:showAsAction="never"
+        android:title="@string/qrscan"/>
+
+</menu>

@@ -1,0 +1,159 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.contact.ShowContact" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/show_contact_avatar_iv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="-100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
+
+        <TextView
+            android:id="@+id/show_remark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/remark"
+            android:textColor="#fff"
+            android:textSize="8pt" />
+
+        <cn.jpush.im.android.demo.view.PullScrollView
+            android:id="@+id/show_contact_sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:fillViewport="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <ProgressBar
+                    android:id="@+id/show_progress_bar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp" />
+
+                <RelativeLayout
+                    android:id="@+id/show_tag_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp" >
+
+                    <TextView
+                        android:id="@+id/show_tag0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tag"
+                        android:textColor="#408080"
+                        android:textSize="8pt" />
+
+                    <TableLayout
+                        android:id="@+id/table_show_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/show_tag0"
+                        android:layout_toRightOf="@+id/show_tag0" >
+                    </TableLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/show_tel_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp" >
+
+                    <View
+                        android:id="@+id/div_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#cccccc" />
+
+                    <TextView
+                        android:id="@+id/show_tels0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/div_tel"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/tel"
+                        android:textColor="#408080"
+                        android:textSize="8pt" />
+
+                    <TableLayout
+                        android:id="@+id/table_show_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/div_tel"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/show_tels0"
+                        android:layout_toRightOf="@+id/show_tels0"
+                        android:stretchColumns="0" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/show_addr_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp" >
+
+                    <View
+                        android:id="@+id/div_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#cccccc" />
+
+                    <TextView
+                        android:id="@+id/show_addrs0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/div_addr"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/addr"
+                        android:textColor="#408080"
+                        android:textSize="8pt" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/div_addr"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toEndOf="@+id/show_addrs0"
+                        android:layout_toRightOf="@+id/show_addrs0"
+                        android:scrollbars="none" >
+
+                        <TableLayout
+                            android:id="@+id/table_show_addr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="0" />
+                    </HorizontalScrollView>
+                </RelativeLayout>
+            </LinearLayout>
+        </cn.jpush.im.android.demo.view.PullScrollView>
+    </FrameLayout>
+
+</LinearLayout>

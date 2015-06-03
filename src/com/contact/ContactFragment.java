@@ -87,7 +87,7 @@ public class ContactFragment extends Fragment {
 		super.onResume();
 		//madapter.open();
 		pd = new ProgressDialog(this.getActivity());
-		pd.setMessage("���ڼ�����...");
+		pd.setMessage("正在加载中...");
 		pd.show();
 		MyAsyncTask task = new MyAsyncTask();
 		task.execute();
